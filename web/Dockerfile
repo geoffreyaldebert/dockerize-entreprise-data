@@ -9,11 +9,7 @@ ENV JAVA_HOME /jdk1.8.0_202
 ENV PATH $PATH:/jdk1.8.0_202/bin
 
 WORKDIR /rna_as_api
-#COPY rna_as_api/Gemfile /rna_as_api/Gemfile
-#COPY rna_as_api/Gemfile.lock /rna_as_api/Gemfile.lock
 RUN bundle install
-RUN bundle exec rails db:create
-RUN bundle exec rails db:migrate
 
 # Add a script to be executed every time the container starts.
 COPY entrypoint.sh /usr/bin/
