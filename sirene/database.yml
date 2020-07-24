@@ -1,0 +1,20 @@
+defaults: &defaults
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  pool: 15
+  username: sirene_as_api
+  password: password
+  port: 5433
+
+development:
+  database: sirene_as_api_development
+  <<: *defaults
+
+test:
+  database: sirene_as_api_test
+  <<: *defaults
+
+production:
+  database: sirene_as_api_production
+  <<: *defaults

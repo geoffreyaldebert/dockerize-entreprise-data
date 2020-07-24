@@ -1,3 +1,5 @@
 tmp/
 rna/rna_as_api/
 rna/jdk*
+sirene/sirene_as_api/
+sirene/jdk*

@@ -16,3 +16,10 @@ services:
     depends_on:
       - db
     network_mode: "host"
+  sirene:
+    build: sirene/
+    ports:
+      - "3002:3002"
+    depends_on:
+      - db
+    network_mode: "host"
